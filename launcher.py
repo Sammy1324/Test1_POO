@@ -30,8 +30,6 @@ def launcher_main():
     vehicles.append(Van("Black", 4, 190, 2300, 1300))
     vehicles.append(Van("Red", 4, 200, 2500, 1500))
 
-    catalogue(vehicles)
-
     def catalogue(vehicles):
         for vehicle in vehicles:
             print(f"Class: {vehicle.__class__.__name__}")
@@ -54,3 +52,5 @@ def launcher_main():
                 for attribute, value in vehicle.__dict__.items():
                     print(f"  {attribute}: {value}")
                 print()
+
+    catalogue(vehicles)

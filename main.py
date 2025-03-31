@@ -2,7 +2,7 @@ from Num_of_wheels.Car import Car
 from Num_of_wheels.Bicycle import Bicycle
 from Type_of_vehicle.Motorcycle import Motorcycle
 from Type_of_vehicle.Van import Van
-from launcher import launcher_main, catalogue
+from launcher import launcher_main
 
 def menu():
     print("Select vehicle")
@@ -45,7 +45,7 @@ def get_data(type_of_vehicle):
         return Van(colour, number_of_wheels, speed, displacement, load_capacity)
     elif type_of_vehicle == 5:
         number_of_wheels = int(input("Enter the number of wheels: "))
-        catalogue(vehicles = [], number_of_wheels = number_of_wheels)
+        launcher_main.catalogue(vehicles = [], number_of_wheels = number_of_wheels)
         return None
     else:
         return None
